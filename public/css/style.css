@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Days One", sans-serif;
+  background: #fff;
+  color: #232323;
+  font-size: 62.5%;
+  font-size: 1.6rem;
+  line-height: normal;
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+ol, ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 978px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 75px 100px;
+}
+
+.container h1 {
+  color: #2E7D32 !important;
+}
+
+.container .task-info, .container .todo-table {
+  margin: 50px 0;
+}
+
+.container .task-info h1, .container .task-info h6, .container .todo-table h1, .container .todo-table h6 {
+  font-family: "Days One", sans-serif;
+  text-align: center;
+}
+
+.container .task-info h1, .container .todo-table h1 {
+  font-size: 3rem;
+}
+
+.container .task-info h6, .container .todo-table h6 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.container .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .input-group label, .container .input-group input, .container .input-group button, .container .input-group a {
+  display: inline-block;
+  font-family: "Days One", sans-serif;
+  width: 25%;
+  height: 42px;
+}
+
+.container .input-group button {
+  cursor: pointer;
+  border: 0;
+  font-size: 1.2rem;
+  outline: 0;
+  background: #2E7D32;
+  color: #fff;
+}
+
+.container .input-group button#btn-update {
+  width: 13%;
+  background: #2185C5;
+}
+
+.container .input-group button#btn-cancel {
+  width: 13%;
+  background: #677480;
+}
+
+.container .input-group input {
+  font-size: 1rem;
+  padding: 10px 25px;
+  width: 70%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 15px 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.container .input-group input:focus {
+  border-radius: 0 15px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container .form-group {
+  width: 100%;
+}
+
+.container .form-group label, .container .form-group input {
+  display: block;
+  font-family: "Days One", sans-serif;
+}
+
+.container .form-group label {
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container .form-group input {
+  font-size: 1rem;
+  padding: 10px 25px;
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 15px 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.container .form-group input:focus {
+  border-radius: 0 15px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container .todo-table table {
+  margin-top: 20px;
+}
+
+.container .todo-table table, .container .todo-table thead, .container .todo-table tbody {
+  width: 100%;
+  text-align: center;
+}
+
+.container .todo-table table th, .container .todo-table table td {
+  font-size: 1rem;
+}
+
+.container .todo-table table thead th:nth-child(1) {
+  width: 5%;
+}
+
+.container .todo-table table thead th:nth-child(2) {
+  width: 0%;
+}
+
+.container .todo-table table thead th:nth-child(3) {
+  width: 65%;
+}
+
+.container .todo-table table thead th:nth-child(4) {
+  width: 10%;
+}
+
+.container .todo-table table thead th:nth-child(5) {
+  width: 20%;
+}
+
+.container .todo-table table tbody td {
+  height: 20px;
+  font-weight: normal;
+}
+
+.container .todo-table table tbody td .button-edit, .container .todo-table table tbody td .button-delete {
+  font-family: "Days One", sans-serif;
+  margin: 10px 0;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.container .todo-table table tbody td .button-edit {
+  background: #2E7D32;
+}
+
+.container .todo-table table tbody td .button-delete {
+  background: #FF1C1C;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 40px;
+  height: 23.5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5cb85c;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #5cb85c;
+          box-shadow: 0 0 1px #5cb85c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15.8px);
+  transform: translateX(15.8px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */

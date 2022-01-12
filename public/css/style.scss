@@ -1,0 +1,275 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+// Variables
+$colorDark: #232323;
+$colorLight: #F0F0F0;
+$customColor: #2E7D32;
+// Fonts
+$titleFont: 'Days One', sans-serif;
+// Shadows
+$boxShadowBottom: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$boxShadowAll: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+// Transition
+$transitionAll: all .3s ease-in;
+// Default Styles
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $titleFont;
+    background: #fff;
+    color: $colorDark;
+    font-size: 62.5%;
+    font-size: 1.6rem;
+    line-height: normal;
+    overflow: hidden;
+}
+
+img{
+	height: 100%;
+}
+
+a, a:link, a:visited, a:hover, a:active{
+	font-size: 1.4rem;
+	color: #fff;
+	text-decoration: none;
+}
+
+ol, ul{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+li{
+	list-style: none;
+}
+
+// Main Styles
+.container{
+    min-height: 100vh;
+    max-width: 978px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 75px 100px;
+
+    h1{
+        color: $customColor !important;
+    }
+
+    .task-info, .todo-table{
+        margin: 50px 0;
+        h1, h6{
+        font-family: $titleFont;
+        text-align: center;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        h6{
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    }
+    
+
+    .input-group{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        label, input, button, a{
+            display: inline-block;
+            font-family: $titleFont;
+            width: 25%;
+            height: 42px;
+            
+        }
+        button{
+            cursor: pointer;
+            border: 0;
+            font-size: 1.2rem;
+            outline: 0;
+            background: $customColor;
+            color: #fff;
+
+            &#btn-update{
+                width: 13%;
+                background: #2185C5;
+            }
+            &#btn-cancel{
+                width: 13%;
+                background: #677480;
+            }
+        }
+        
+        input{
+            font-size: 1rem;
+            padding: 10px 25px;
+            width: 70%;
+            box-shadow: none;
+            border-radius: 15px 0;
+            transition: $transitionAll;
+            &:focus{
+                border-radius: 0 15px;
+                box-shadow: $boxShadowAll;
+            }
+        }
+    }
+
+    .form-group{
+        width: 100%;
+        label, input{
+            display: block;
+            font-family: $titleFont;
+        }
+        label{
+            letter-spacing: 2px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input{
+            font-size: 1rem;
+            padding: 10px 25px;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 15px 0;
+            transition: $transitionAll;
+            &:focus{
+                border-radius: 0 15px;
+                box-shadow: $boxShadowAll;
+            }
+        }
+    }
+
+    .todo-table{
+        table{
+            margin-top: 20px;
+        }
+        table, thead, tbody{
+            width: 100%;
+            text-align: center;
+        }
+
+        table{
+            th, td{
+                font-size: 1rem;
+            }
+
+            thead{
+                th:nth-child(1){
+                    
+                    width: 5%;
+                }
+                th:nth-child(2){
+                    width: 0%;
+                }
+                th:nth-child(3){
+                    width: 65%;
+                }
+                th:nth-child(4){
+                    width: 10%;
+                }
+                th:nth-child(5){
+                    width: 20%;
+                }
+            }
+            tbody{
+                td{
+                    height: 20px;
+                    font-weight: normal;
+
+                    .button-edit, .button-delete{
+                        font-family: $titleFont;
+                        margin: 10px 0;
+                        border-radius: 30px;
+                        display: inline-block;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        border: 0;
+                        outline: 0;
+                        padding: 5px 10px;
+                        color: #fff;
+                    }
+                    .button-edit{
+                        background: $customColor;
+                    }
+                    .button-delete{
+                        background: #FF1C1C;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* The switch - the box around the slider */
+.switch {
+position: relative;
+display: inline-block;
+margin: 0 auto;
+width: 40px;
+height: 23.5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 16px;
+width: 16px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #5cb85c;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #5cb85c;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(15.8px);
+-ms-transform: translateX(15.8px);
+transform: translateX(15.8px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
